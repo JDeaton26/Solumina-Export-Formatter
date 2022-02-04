@@ -1,0 +1,11 @@
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\bin\Release\Solumina Export Formatter.exe.config
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\bin\Release\Solumina Export Formatter.exe
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\bin\Release\Solumina Export Formatter.pdb
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.csproj.SuggestedBindingRedirects.cache
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.csproj.ResolveComReference.cache
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina_Export_Formatter_ON.MainMenu.resources
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina_Export_Formatter.Properties.Resources.resources
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.csproj.GenerateResource.cache
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.csproj.CoreCompileInputs.cache
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.exe
+C:\Github Repos\Solumina Export Formatter\Solumina Export Formatter\obj\Release\Solumina Export Formatter.pdb
