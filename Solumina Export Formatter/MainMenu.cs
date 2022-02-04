@@ -149,7 +149,6 @@ namespace Solumina_Export_Formatter_ON
                 MessageBox.Show("File not found, choose a new Solumina Export file");
                 return;
             }
-
             //open the user selected file
             Excel.Application xl = new Excel.Application();
             Workbook wb = xl.Workbooks.Open(@sourceTextBox.Text, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
@@ -158,9 +157,9 @@ namespace Solumina_Export_Formatter_ON
 
             //find the number of populated rows
             int lastRow = sheet1.Cells.Find("*", System.Reflection.Missing.Value,
-                               System.Reflection.Missing.Value, System.Reflection.Missing.Value,
-                               Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious,
-                               false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
+                                System.Reflection.Missing.Value, System.Reflection.Missing.Value,
+                                Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious,
+                                false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
 
             //proper formatting for a RWK WO
             if (reworkWTFCheckBox.Checked)
@@ -199,13 +198,14 @@ namespace Solumina_Export_Formatter_ON
             //Self-explanatory formatting stuff
             sheet1.Cells[1, 3] = "Technician Name";
             sheet1.Cells[1, 4] = "Completed Date";
+            sheet1.Cells[1, 5] = "Comments";
             sheet1.get_Range("A1").EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             sheet1.get_Range("D1").EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
             sheet1.get_Range("D1").EntireColumn.NumberFormat = "mm/dd/yyyy";
-            sheet1.get_Range("A1:D1").EntireColumn.AutoFit();
+            sheet1.get_Range("A1:E1").EntireColumn.AutoFit();
 
             //Apply borders to cells the are/will be populated
-            string borderEnd = "D" + lastRow;
+            string borderEnd = "E" + lastRow;
             Excel.Range borderRange;
             borderRange = sheet1.get_Range("A1", borderEnd);
             foreach (Excel.Range cell in borderRange.Cells)
@@ -223,11 +223,12 @@ namespace Solumina_Export_Formatter_ON
                 wb.Close();
                 xl.Quit();
             }
+
             catch (Exception ex)
             {
                 wb.Close(false, misValue, misValue);
                 xl.Quit();
-                MessageBox.Show("Error saving file. Do not save changes to CSV file. Returning to main menu.\n" + ex);
+                MessageBox.Show("!!!!!!!!!Error!!!!!!!!!\nUnable to save file.\nClose old formatted file if its open.");
                 return;
             }
 
@@ -301,7 +302,7 @@ namespace Solumina_Export_Formatter_ON
 
         private void aboutButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Author: Jared Deaton");
+            MessageBox.Show("Author: Jared Deaton\nLast update: 2/3/2021");
         }
     }
 }

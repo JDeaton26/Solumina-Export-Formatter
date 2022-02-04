@@ -160,7 +160,7 @@
             this.Controls.Add(this.sourceBrowseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainMenu";
-            this.Text = "Solumina Export Formatter v1.0";
+            this.Text = "Solumina Export Formatter v1.1";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
